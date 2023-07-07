@@ -1,4 +1,4 @@
-package com.example.new_test
+package com.sazeninasport.fortuna.bet
 
 import io.flutter.embedding.android.FlutterActivity
 

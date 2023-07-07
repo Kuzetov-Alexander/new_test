@@ -16,15 +16,6 @@ class WebviewWidgetState extends State<WebviewWidget> {
   double currentDownloading = 0;
   late WebViewController controller;
 
-  // @override
-  // void initState() async {
-  //   super.initState();
-
-  // if (Platform.isAndroid) {
-  //   WebView.platform = SurfaceAndroidWebView();
-  // }
-  // }
-
   @override
   Future<void> didChangeDependencies() async {
     super.didChangeDependencies();
@@ -45,16 +36,6 @@ class WebviewWidgetState extends State<WebviewWidget> {
               currentDownloading = progress / 100;
             });
           },
-          //   onPageStarted: (String url) {},
-          //   onPageFinished: (String url) {},
-          //   onWebResourceError: (WebResourceError error) {},
-          //  navigationDelegate: (NavigationRequest request) {
-          //         if (request.url.contains('/choose-file-url')) {
-          //           pickFile();
-          //           return NavigationDecision.prevent;
-          //         }
-          //         return NavigationDecision.navigate;
-          //       },
         ),
       )
       ..loadRequest(
@@ -104,7 +85,6 @@ class WebviewWidgetState extends State<WebviewWidget> {
 
     if (result != null) {
       File file = File(result.files.single.path!);
-      print('Обработка');
     }
   }
 }
